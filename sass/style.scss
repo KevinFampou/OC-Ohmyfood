@@ -1,0 +1,14 @@
+@import "libs/normalize.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap');
+
+:root {
+    --title: 'Shrikhand', cursive;
+    --text: 'Roboto', sans-serif;
+    --color1: #9356DC;
+    --color2: #FF79DA;
+    --color3: #99E2D0;
+}
+
+h1 {
+    font-family: var(--title);
+}
