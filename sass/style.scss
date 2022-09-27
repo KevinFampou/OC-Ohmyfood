@@ -1,14 +1,255 @@
-@import "libs/normalize.scss";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap');
+@import "libs/responsive.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap');
 
-:root {
-    --title: 'Shrikhand', cursive;
-    --text: 'Roboto', sans-serif;
-    --color1: #9356DC;
-    --color2: #FF79DA;
-    --color3: #99E2D0;
+$title: 'Shrikhand', cursive;
+$text: 'Roboto', sans-serif;
+$color1: #9356DC;
+$color2: #FF79DA;
+$color3: #99E2D0;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
-    font-family: var(--title);
+body {
+    font-family: $text;
 }
+
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(53, 53, 53, 0.5);
+    box-shadow: 0px 0px 12px 0px rgba(53, 53, 53, 0.5);
+    position: fixed;
+    z-index: 1;
+ 
+    .logo {
+        width: 50vw;
+        padding: 20px;
+        padding-bottom: 15px;
+        }
+}
+
+main {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    top: 80px;
+    z-index: 0;
+
+    .location {
+        display: flex;
+        justify-content: center;
+        background-color: #e5e5e5;
+        color: rgb(62, 62, 62);
+        padding: 20px;
+
+        & h1 {
+            font-size: 1rem;
+            font-weight: 400;
+            padding-left: 15px;
+        }
+    }
+
+    .intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f2f2f2;
+
+        & h2 {
+            font-size: 6vw;
+            padding: 0 70px;
+            padding-top: 40px;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+
+        & p {
+            font-size: 4vw;
+            font-weight: 400;
+            padding: 0 50px;
+            padding-bottom: 30px;
+            text-align: center;
+            color: rgb(73, 72, 72);
+        }
+
+        & input {
+            border-radius: 30px;
+            -webkit-box-shadow: rgba(40, 39, 39, 0.5) 0px 13px 27px -5px;
+            box-shadow: rgba(40, 39, 39, 0.5) 0px 13px 27px -5px;
+            border: none;
+            font-size: 4vw;
+            font-weight: 500;
+            padding: 15px 25px;
+            background: linear-gradient(to top, $color1, $color2);
+            color: #fff;
+            margin-bottom: 50px;
+            
+        }
+    }
+
+    .working {
+        padding-top: 50px;
+
+        & h2 {
+            padding-left: 20px;
+            font-size: 6vw;
+        }
+
+        & .working-container {
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+
+            & article {
+                background-color: #f2f2f2;
+                display: flex;
+                align-items: center;
+                -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px;
+                border: 1px transparent;
+                border-radius: 20px;
+                margin-bottom: 20px;
+                height: 10vh;
+
+                & .number {
+                    position: relative;
+                    right: 15px;
+                    border: 1px solid $color1;
+                    background-color: $color1;
+                    color: #fff;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    font-size: 4vw;
+                    font-weight: 400;
+                }
+
+                & i {
+                   font-size: 6.5vw;
+                   padding-left: 10px;
+                   padding-right: 30px; 
+                   color: rgb(78, 76, 76);   
+                }
+                
+                & p {
+                    font-size: 4vw;
+                    font-weight: 500;
+                }
+            }
+
+            & article:hover {
+                background-color: #e8e3e3;
+
+                & i {
+                    color: $color1;
+                   }
+            }
+
+        }
+    }
+
+    .restaurant {
+        background-color: #f2f2f2;
+        padding-top: 50px;
+
+        & h2 {
+            padding-left: 20px;
+            font-size: 6vw;
+        }
+
+        & .restaurant-container {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+       
+            & article {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 30vh;
+                margin-bottom: 15px;
+                border-radius: 20px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px;
+
+                & .new {
+                    width: 25%;
+                    position: absolute;
+                    color: rgb(40, 108, 114);
+                    background-color: rgb(82, 218, 179);
+                    border: none;
+                    border-radius: 3px;
+                    text-align: center;
+                    padding: 5px 10px;
+                    left: 67%;
+                    margin-top: 10px;
+                    
+                    & p {
+                        padding-left: 0;
+                        font-size: 4vw;
+                        font-weight: 500;
+                    }
+                }
+                
+                & img {
+                    width: 100%;
+                    height: 190px;
+                    object-fit:cover;
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+                }
+
+                & h3 {
+                    padding: 5px 0 0 10px;
+                    font-size: 1rem;
+                    font-weight: 500;
+                }
+
+                & p {
+                    padding-left: 10px;
+                    font-size: 1rem;
+                    font-weight: 300;
+                }
+
+                & .btn {
+                    position: relative;
+                    border: none;
+                    left: 85%;
+                    bottom: 15%;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: red;
+    width: 100%;
+    height: 500px;
+
+    & h3 {
+        font-family: $title;
+    }
+}
+
+
+
+
+
+
+
