@@ -11,32 +11,95 @@ body {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: inherit;
   cursor: pointer;
 }
 
+li {
+  list-style: none;
+}
+
+.loader-container {
+  position: fixed;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: disappear 1s 3s;
+  animation-fill-mode: forwards;
+  transform-origin: top;
+  z-index: 999;
+}
+
+.dot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #9356DC;
+  margin: 0 15px;
+  animation: loader infinite 0.3s alternate;
+}
+
+.d2 {
+  animation-delay: 0.05s;
+  background-color: #FF79DA;
+}
+
+.d3 {
+  animation-delay: 0.1s;
+  background-color: #99E2D0;
+}
+
+@keyframes loader {
+  100% {
+    transform: translateY(-30px);
+  }
+}
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
+}
 header {
   display: flex;
-  background-color: #fff;
   justify-content: center;
-  width: 100%;
-  height: 80px;
-  -webkit-box-shadow: 0px 0px 12px 0px rgba(53, 53, 53, 0.5);
+  background-color: #fff;
+  padding: 1rem;
   box-shadow: 0px 0px 12px 0px rgba(53, 53, 53, 0.5);
-  position: fixed;
+  position: relative;
   z-index: 1;
 }
 header .logo {
-  width: 50vw;
+  font-size: 10vw;
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+}
+
+footer {
+  background-color: #353535;
   padding: 20px;
-  padding-bottom: 15px;
+}
+footer .footer {
+  color: #fff;
+}
+footer h3 {
+  font-family: "Shrikhand", cursive;
+  padding-bottom: 20px;
+  font-size: 5vw;
+}
+footer li {
+  margin-bottom: 10px;
+  font-size: 4vw;
+}
+footer i {
+  padding-right: 10px;
+  font-size: 4vw;
 }
 
 main {
-  width: 100%;
-  height: fit-content;
   position: relative;
-  top: 80px;
   z-index: 0;
 }
 main .location {
@@ -47,8 +110,8 @@ main .location {
   padding: 20px;
 }
 main .location h1 {
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 4vw;
+  font-weight: 500;
   padding-left: 15px;
 }
 main .intro {
@@ -74,7 +137,6 @@ main .intro p {
 }
 main .intro input {
   border-radius: 30px;
-  -webkit-box-shadow: rgba(40, 39, 39, 0.5) 0px 13px 27px -5px;
   box-shadow: rgba(40, 39, 39, 0.5) 0px 13px 27px -5px;
   border: none;
   font-size: 4vw;
@@ -100,7 +162,6 @@ main .working .working-container article {
   background-color: #f2f2f2;
   display: flex;
   align-items: center;
-  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px;
   border: 1px transparent;
   border-radius: 20px;
@@ -150,20 +211,19 @@ main .restaurant .restaurant-container {
   flex-direction: column;
   padding: 20px;
 }
-main .restaurant .restaurant-container article {
+main .restaurant .restaurant-container .restaurant-card {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 30vh;
   margin-bottom: 15px;
   border-radius: 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px;
 }
-main .restaurant .restaurant-container article .new {
+main .restaurant .restaurant-container .restaurant-card .new {
   width: 25%;
   position: absolute;
-  color: rgb(40, 108, 114);
-  background-color: rgb(82, 218, 179);
+  color: #1b6150;
+  background-color: #99E2D0;
   border: none;
   border-radius: 3px;
   text-align: center;
@@ -171,43 +231,47 @@ main .restaurant .restaurant-container article .new {
   left: 67%;
   margin-top: 10px;
 }
-main .restaurant .restaurant-container article .new p {
+main .restaurant .restaurant-container .restaurant-card .new p {
   padding-left: 0;
   font-size: 4vw;
   font-weight: 500;
 }
-main .restaurant .restaurant-container article img {
+main .restaurant .restaurant-container .restaurant-card img {
   width: 100%;
   height: 190px;
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-main .restaurant .restaurant-container article h3 {
-  padding: 5px 0 0 10px;
-  font-size: 1rem;
+main .restaurant .restaurant-container .restaurant-card .restaurant-card-bottom {
+  padding: 10px 20px 20px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+main .restaurant .restaurant-container .restaurant-card .restaurant-card-bottom h3 {
+  padding-bottom: 1px;
+  font-size: 5vw;
   font-weight: 500;
 }
-main .restaurant .restaurant-container article p {
-  padding-left: 10px;
-  font-size: 1rem;
+main .restaurant .restaurant-container .restaurant-card .restaurant-card-bottom p {
+  font-size: 4.5vw;
   font-weight: 300;
 }
-main .restaurant .restaurant-container article .btn {
-  position: relative;
-  border: none;
-  left: 85%;
-  bottom: 15%;
-  font-size: 1.8rem;
+main .restaurant .restaurant-container .restaurant-card .restaurant-card-bottom i {
+  font-size: 8vw;
+  position: absolute;
+  right: 40px;
+  cursor: pointer;
 }
-
-footer {
-  background-color: red;
-  width: 100%;
-  height: 500px;
+main .restaurant .restaurant-container .restaurant-card .restaurant-card-bottom .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  transition: 1s ease-in-out;
+  background-clip: text;
+  opacity: 0;
 }
-footer h3 {
-  font-family: "Shrikhand", cursive;
+main .restaurant .restaurant-container .restaurant-card .restaurant-card-bottom .fa-solid:hover {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

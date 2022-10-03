@@ -1,0 +1,208 @@
+main {
+    position: relative;
+    z-index: 0;
+
+    .location {
+        display: flex;
+        justify-content: center;
+        background-color: #e5e5e5;
+        color: rgb(62, 62, 62);
+        padding: 20px;
+
+        & h1 {
+            font-size: 4vw;
+            font-weight: 500;
+            padding-left: 15px;
+        }
+    }
+
+    .intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f2f2f2;
+
+        & h2 {
+            font-size: 6vw;
+            padding: 0 70px;
+            padding-top: 40px;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+
+        & p {
+            font-size: 4vw;
+            font-weight: 400;
+            padding: 0 50px;
+            padding-bottom: 30px;
+            text-align: center;
+            color: rgb(73, 72, 72);
+        }
+
+        & input {
+            border-radius: 30px;
+            box-shadow: rgba(40, 39, 39, 0.5) 0px 13px 27px -5px;
+            border: none;
+            font-size: 4vw;
+            font-weight: 500;
+            padding: 15px 25px;
+            background: linear-gradient(to top, $color1, $color2);
+            color: #fff;
+            margin-bottom: 50px;
+            
+        }
+    }
+
+    .working {
+        padding-top: 50px;
+
+        & h2 {
+            padding-left: 20px;
+            font-size: 6vw;
+        }
+
+        & .working-container {
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+
+            & article {
+                background-color: #f2f2f2;
+                display: flex;
+                align-items: center;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px;
+                border: 1px transparent;
+                border-radius: 20px;
+                margin-bottom: 20px;
+                height: 10vh;
+
+                & .number {
+                    position: relative;
+                    right: 15px;
+                    border: 1px solid $color1;
+                    background-color: $color1;
+                    color: #fff;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    font-size: 4vw;
+                    font-weight: 400;
+                }
+
+                & i {
+                   font-size: 6.5vw;
+                   padding-left: 10px;
+                   padding-right: 30px; 
+                   color: rgb(78, 76, 76);   
+                }
+                
+                & p {
+                    font-size: 4vw;
+                    font-weight: 500;
+                }
+            }
+
+            & article:hover {
+                background-color: #e8e3e3;
+
+                & i {
+                    color: $color1;
+                   }
+            }
+
+        }
+    }
+
+    .restaurant {
+        background-color: #f2f2f2;
+        padding-top: 50px;
+
+        & h2 {
+            padding-left: 20px;
+            font-size: 6vw;
+        }
+
+        & .restaurant-container {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+       
+            & .restaurant-card {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-bottom: 15px;
+                border-radius: 20px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px;
+
+                & .new {
+                    width: 25%;
+                    position: absolute;
+                    color: darken($color3, 50%);
+                    background-color: $color3;
+                    border: none;
+                    border-radius: 3px;
+                    text-align: center;
+                    padding: 5px 10px;
+                    left: 67%;
+                    margin-top: 10px;
+                    
+                    & p {
+                        padding-left: 0;
+                        font-size: 4vw;
+                        font-weight: 500;
+                    }
+                }
+                
+                & img {
+                    width: 100%;
+                    height: 190px;
+                    object-fit:cover;
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+                }
+
+                & .restaurant-card-bottom {
+                    padding: 10px 20px 20px 10px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    & h3 {
+                        padding-bottom: 1px;
+                        font-size: 5vw; 
+                        font-weight: 500;
+                    }
+    
+                    & p {
+                        font-size: 4.5vw;
+                        font-weight: 300;
+                    }
+    
+                    & i {
+                        font-size: 8vw;
+                        position: absolute;    
+                        right: 40px; 
+                        cursor: pointer; 
+                    }
+
+                    & .fa-solid {
+                        color: transparent;
+                        background-image: linear-gradient(to top, $color1, $color2);
+                        transition: 1s ease-in-out;
+                        background-clip: text;
+                        opacity: 0;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+
+                 }
+
+            }
+        }
+    }
+}
+
