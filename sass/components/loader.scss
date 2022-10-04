@@ -32,15 +32,3 @@
     background-color: $color3;
 }
 
-@keyframes loader {
-    100% {
-        transform: translateY(-30px);
-   
-    }
-}
-
-@keyframes disappear {
-to {
-        transform: scale(0);
-    }
-}
