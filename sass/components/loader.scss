@@ -7,9 +7,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: disappear 1s 3s;
+    animation: disappear 200ms 2s;
     animation-fill-mode: forwards;
     transform-origin: top;
+    opacity: 0.9;
     z-index: 999;
 }
 

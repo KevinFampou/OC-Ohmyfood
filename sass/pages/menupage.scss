@@ -22,7 +22,8 @@
    padding: 20px 10px 50px;
    position: relative;
    z-index: 1;
-   bottom: 60px;
+   margin-top: -4rem;
+   
 
    & .top-menu {
     display: flex;
@@ -44,10 +45,13 @@
 
     & .fa-solid {
         color: transparent;
+        -webkit-background-image: linear-gradient(to top, $color1, $color2);
         background-image: linear-gradient(to top, $color1, $color2);
         transition: 1s ease-in-out;
+        -webkit-background-clip: text;
         background-clip: text;
         opacity: 0;
+
 
         &:hover {
             opacity: 1;
@@ -58,30 +62,42 @@
    .menu-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
     padding-top: 30px;
+
+    & h3 {
+        font-weight: 300;
+        font-size: 4.5vw;
+        padding-left: 10px;
+
+        &::after {
+            content: "";
+            display: flex;
+            margin-top: 5px;
+            width: 3rem;
+            height: 0.25rem;
+            background-color: $color3;
+          }
+    }
 
     & .menu-category {
         overflow: hidden;
-        
-           
-        & h3 {
-            font-weight: 300;
-            font-size: 4.5vw;
-            padding-bottom: 10px;
-            padding-left: 10px;
-        }
 
+        
         & .menu-item {
+            @for $i from 2 through 4 {
+                &:nth-child(#{$i}) {
+                    animation-delay: 100ms * $i;
+                }
+            }
             background-color: white;
             display: flex;
             border-radius: 1rem;
             box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
             overflow: hidden;
             margin: 1rem;
-            
+            animation: emergence 1s;
+            animation-fill-mode: both;
 
-            
             & .menu-item-text {
                 padding: 10px;
                 overflow: hidden;
@@ -149,8 +165,24 @@
         }
     }
    }
+
+   & .buy {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+
+       & input {
+        border-radius: 30px;
+        box-shadow: rgba(40, 39, 39, 0.5) 0px 13px 27px -5px;
+        border: none;
+        font-size: 4vw;
+        font-weight: 500;
+        padding: 15px 45px;
+        background: linear-gradient(to top, $color1, $color2);
+        color: #fff;
+        cursor: pointer;
+        }
+   }
+
 }
 
-.mfooter {
-    position: relative;
-}
