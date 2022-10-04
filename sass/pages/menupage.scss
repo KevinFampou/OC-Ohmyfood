@@ -12,7 +12,8 @@
 
 .bg-menu {
     width: 100%;
-    object-fit:contain;
+    height: 30vh;
+    object-fit:cover;
 }
 
 .main-menu {
@@ -84,7 +85,7 @@
 
         
         & .menu-item {
-            @for $i from 2 through 4 {
+            @for $i from 2 through 5 {
                 &:nth-child(#{$i}) {
                     animation-delay: 100ms * $i;
                 }

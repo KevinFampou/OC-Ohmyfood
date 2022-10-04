@@ -308,7 +308,8 @@ main .restaurant .restaurant-container .restaurant-card .restaurant-card-bottom 
 
 .bg-menu {
   width: 100%;
-  object-fit: contain;
+  height: 30vh;
+  object-fit: cover;
 }
 
 .main-menu {
@@ -387,6 +388,9 @@ main .restaurant .restaurant-container .restaurant-card .restaurant-card-bottom 
 }
 .main-menu .menu-grid .menu-category .menu-item:nth-child(4) {
   animation-delay: 400ms;
+}
+.main-menu .menu-grid .menu-category .menu-item:nth-child(5) {
+  animation-delay: 500ms;
 }
 .main-menu .menu-grid .menu-category .menu-item .menu-item-text {
   padding: 10px;
