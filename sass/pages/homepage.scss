@@ -13,17 +13,17 @@ main {
             font-size: 4vw;
 
             @media ($desktop) {
-                font-size: 1.2vw;
+                font-size: 1.3vw;
             }
         }
 
-        & h1 {
+        & h2 {
             font-size: 4vw;
             font-weight: 500;
             padding-left: 15px;
 
             @media ($desktop) {
-                font-size: 1.2vw;
+                font-size: 1.3vw;
             }
         }
     }
@@ -239,7 +239,7 @@ main {
                 & .restaurant-card-bottom {
                     padding: 10px 20px 20px 10px;
                     display: flex;
-                    justify-content: space-between;
+                    flex-direction: column;
 
                     & h3 {
                         padding-bottom: 1px;

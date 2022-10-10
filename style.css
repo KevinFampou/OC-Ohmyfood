@@ -153,17 +153,17 @@ main .location i {
 }
 @media (min-width: 1000px) {
   main .location i {
-    font-size: 1.2vw;
+    font-size: 1.3vw;
   }
 }
-main .location h1 {
+main .location h2 {
   font-size: 4vw;
   font-weight: 500;
   padding-left: 15px;
 }
 @media (min-width: 1000px) {
-  main .location h1 {
-    font-size: 1.2vw;
+  main .location h2 {
+    font-size: 1.3vw;
   }
 }
 main .intro {
@@ -371,7 +371,7 @@ main .restaurant .restaurant-container .restaurant-card img {
 main .restaurant .restaurant-container .restaurant-card .restaurant-card-bottom {
   padding: 10px 20px 20px 10px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 main .restaurant .restaurant-container .restaurant-card .restaurant-card-bottom h3 {
   padding-bottom: 1px;
