@@ -11,15 +11,27 @@ footer {
         font-family: $title;
         padding-bottom: 20px;
         font-size: 5vw;
+
+        @media ($desktop) {    
+            font-size: 2vw;
+        }
     }
 
     & li {
         margin-bottom: 10px;
         font-size: 4vw;
+
+        @media ($desktop) {    
+            font-size: 1.3vw;
+        }
     }
 
     & i {
         padding-right: 10px;
         font-size: 4vw;
+
+        @media ($desktop) {    
+            font-size: 1.3vw;
+        }
     }
 }

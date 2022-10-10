@@ -2,11 +2,14 @@
     display: flex;
     align-items: center;
 
-
     & i {
         position: relative;
         right: 50px;
         font-size: 6vw;
+
+        @media ($desktop) {
+            font-size: 3vw;
+          }
     }
 }
 
@@ -24,6 +27,11 @@
    position: relative;
    z-index: 1;
    margin-top: -4rem;
+
+   @media ($desktop) {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
    
 
    & .top-menu {
@@ -35,6 +43,10 @@
     & h2 {
         font-family: $title;
         font-size: 6vw;
+
+        @media ($desktop) {
+            font-size: 2vw;
+          }
     }
 
     & i {
@@ -42,6 +54,10 @@
         position: absolute;    
         right: 40px; 
         cursor: pointer; 
+
+        @media ($desktop) {
+            font-size: 3vw;
+          }
     }
 
     & .fa-solid {
@@ -65,10 +81,18 @@
     grid-template-columns: 1fr;
     padding-top: 30px;
 
+    @media ($desktop) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
     & h3 {
         font-weight: 300;
         font-size: 4.5vw;
         padding-left: 10px;
+
+        @media ($desktop) {
+            font-size: 2vw;
+          }
 
         &::after {
             content: "";
@@ -112,6 +136,10 @@
                 text-overflow: ellipsis;
                 overflow: hidden;
                 margin: 0;
+
+                @media ($desktop) {
+                    font-size: 1.3vw;
+                  }
             }
 
             & p {
@@ -121,6 +149,10 @@
                 text-overflow: ellipsis;
                 overflow: hidden;
                 margin: 0;
+
+                @media ($desktop) {
+                    font-size: 1.3vw;
+                  }
             }
 
             & .price {
@@ -151,6 +183,10 @@
                     font-size: 3vw;
                     font-weight: 700;
                     border-radius: 50%;
+
+                    @media ($desktop) {
+                        font-size: 1.3vw;
+                      }
                 }
             }
 
@@ -182,6 +218,10 @@
         background: linear-gradient(to top, $color1, $color2);
         color: #fff;
         cursor: pointer;
+
+        @media ($desktop) {
+            font-size: 1.3vw;
+          }
         }
    }
 

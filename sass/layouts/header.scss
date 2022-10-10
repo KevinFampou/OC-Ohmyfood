@@ -11,5 +11,9 @@ header {
         font-size: 10vw;
         font-family: $title;
         text-align: center;
+
+        @media ($desktop) {
+                font-size: 3vw;
+            }
         }
 }
